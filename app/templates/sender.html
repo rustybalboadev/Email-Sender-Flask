@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Email Sender</title>
+        <meta name='viewport' content='width=device=width, initial-scale=1.0'>
+        <link href='static/bootstrap.min.css' rel='stylesheet' media='screen'>
+    </head>
+    <body>
+        <style>
+        div.a {
+            text-align: center;
+        }
+        </style>
+        <div class='container'>
+            <div class="a">
+            <h1>Email Sender</h1>
+            <br>
+            <form action='/' method='post'>
+                <h1>Your Email Here</h1>
+                <input type='text' placeholder="Your Email" name="your_email"  >
+                <h1>Your Email Password</h1>
+                <input type='password' id='input' placeholder="Your Password">
+                <input type="checkbox" onclick="myFunction()">ShowPassword
+                <h1>Their Email</h1>
+                <input type='text' placeholder="Their Email" name='their_email' >
+                <h1>Your Message</h1>
+                <textarea rows="10" cols="30" name="message">Enter Your Message Here</textarea>
+                <input class="btn btn-default" type="submit", value='Send'>
+            </form>
+            </div>
+        </div>
+        <script>
+        function myFunction() {
+            var x = document.getElementById("input");
+            if (x.type == "password") {
+                x.type = "text";
+            }
+            else {
+                x.type = "password";
+            }
+        }
+        </script>
+    </body>
+</html>
